@@ -1,4 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" role="img" aria-label="Popsy">
-  <text x="130" y="52" text-anchor="middle" font-family="'Trebuchet MS',Verdana,sans-serif" font-weight="800" font-size="44" fill="#E2231A" letter-spacing="-1">Popsy</text>
-  <circle cx="214" cy="20" r="6" fill="#F6B40A"/>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&amp;display=swap');
+      .popsy-text {
+        font-family: 'Fredoka', sans-serif;
+        fill: #D21F3C;
+        font-size: 42px;
+        font-weight: 700;
+        text-anchor: middle;
+        letter-spacing: 0.05em;
+      }
+    </style>
+  </defs>
+  <text x="130" y="54" class="popsy-text">POPSY</text>
 </svg>

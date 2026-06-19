@@ -5,15 +5,27 @@ import { Icon } from "@/components/Icon";
 const pillars = [
   {
     tag: "Misión",
-    body: "Potenciar los proyectos de todos los emprendedores y empresarios y hacerlos crecer, sea cual sea el punto en el que se encuentren.",
+    body: "Potenciar los proyectos de emprendedores y empresarios, impulsando su crecimiento sin importar la etapa en la que se encuentren, mediante soluciones innovadoras que generen valor y contribuyan al éxito de sus negocios.",
   },
   {
     tag: "Visión",
-    body: "Ser un referente como fabricantes de productos publicitarios, estar continuamente a la vanguardia y ayudar a empresarios y emprendedores a cumplir sus metas y alcanzar la cima de su sector.",
+    body: "Ser un referente en la fabricación de productos publicitarios, manteniéndonos siempre a la vanguardia del mercado y apoyando a empresarios y emprendedores para que alcancen sus metas y se posicionen en la cima de su sector.",
   },
   {
     tag: "Valores",
-    body: "Destacamos la comunicación y la profesionalidad ante todo, no solo con el cliente sino como cultura interna del equipo, estando a la vanguardia de las necesidades del mercado.",
+    body: "Comunicación: Fomentamos una comunicación clara, cercana y efectiva, tanto con nuestros clientes como dentro de nuestro equipo.",
+  },
+  {
+    tag: "Profesionalismo",
+    body: "Actuamos con responsabilidad, compromiso y excelencia en cada proyecto que desarrollamos.",
+  },
+  {
+    tag: "Innovación",
+    body: "Nos mantenemos en constante evolución para responder a las nuevas necesidades del mercado con soluciones creativas y actuales.",
+  },
+  {
+    tag: "Compromiso con el éxito",
+    body: "Trabajamos con dedicación para alcanzar nuestros objetivos y contribuir al crecimiento de las empresas que confían en nosotros.",
   },
 ];
 

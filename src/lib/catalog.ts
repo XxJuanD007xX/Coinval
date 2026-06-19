@@ -136,22 +136,6 @@ export const categories: Category[] = [
     ],
   },
   {
-    slug: "materiales-pos",
-    title: "Materiales POS / POP",
-    tagline:
-      "Material de punto de venta que impulsa la decisión de compra en el momento clave.",
-    items: ["Material POP", "Exhibición", "Habladores"],
-    icon: "pos",
-    images: [
-      { src: "/catalogo/materiales-pos/01.png", w: 794, h: 1123 },
-      { src: "/catalogo/materiales-pos/02.png", w: 188, h: 224 },
-      { src: "/catalogo/materiales-pos/03.png", w: 186, h: 270 },
-      { src: "/catalogo/materiales-pos/04.png", w: 242, h: 240 },
-      { src: "/catalogo/materiales-pos/05.png", w: 156, h: 250 },
-      { src: "/catalogo/materiales-pos/06.png", w: 200, h: 200 },
-    ],
-  },
-  {
     slug: "acrilico-led",
     title: "Material en acrílico y avisos luminosos LED",
     tagline:

@@ -6,17 +6,9 @@ import { Icon, type UtilityIcon } from "@/components/Icon";
   Reemplaza los valores con la información real de Coinval.
 */
 const details: { icon: UtilityIcon; label: string; value: string }[] = [
-  { icon: "phone", label: "Teléfono", value: "+57 (601) 000 0000" },
-  { icon: "whatsapp", label: "WhatsApp", value: "+57 300 000 0000" },
-  { icon: "mail", label: "Correo", value: "contacto@coinval.com" },
-  {
-    icon: "pin",
-    label: "Dirección",
-    value: "Dirección de Coinval, Ciudad, Colombia",
-  },
+  { icon: "whatsapp", label: "WhatsApp", value: "315 883 9090" },
+  { icon: "mail", label: "Correo", value: "coinval.comercial1@gmail.com" },
 ];
-
-const social = ["Instagram", "Facebook", "TikTok"];
 
 export function Contact() {
   return (
@@ -36,25 +28,9 @@ export function Contact() {
                 Datos de contacto
               </h2>
               <p className="mt-4 max-w-md text-base leading-relaxed text-ink-2">
-                Estos son los datos de Coinval, fabricantes de productos
-                publicitarios y de activación de marca.
+                Estos son los datos de Coinval, productos publicitarias y de
+                activación de marca.
               </p>
-
-              <div className="mt-8">
-                <h3 className="text-xs font-semibold uppercase tracking-wide text-ink-3">
-                  Redes sociales
-                </h3>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {social.map((s) => (
-                    <li
-                      key={s}
-                      className="rounded-full border border-border-2 bg-surface-2 px-3.5 py-1.5 text-sm font-medium text-ink-2"
-                    >
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
 
             <div className="border-t border-border-1 bg-surface-2 p-8 sm:p-12 lg:border-l lg:border-t-0">

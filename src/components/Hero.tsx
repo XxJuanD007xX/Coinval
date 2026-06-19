@@ -27,7 +27,7 @@ export function Hero() {
         <div className="relative">
           <span className="inline-flex items-center gap-2 rounded-full border border-border-2 bg-surface-1 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-ink-2 shadow-[var(--shadow-sm)]">
             <span className="size-2 rounded-full bg-brand-strong" />
-            Fábrica de productos publicitarios
+            Productos publicitarios
           </span>
 
           <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-ink-1 sm:text-5xl lg:text-6xl">

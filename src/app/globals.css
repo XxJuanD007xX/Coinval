@@ -10,7 +10,7 @@
   /* Marca */
   --brand: #ffc72c; /* amarillo señal */
   --brand-strong: #f2a900; /* ámbar profundo (hover / detalle) */
-  --brand-soft: #fff3d1; /* lavado de marca para fondos */
+  --brand-soft: #ffe59e; /* lavado de marca para fondos (ajustado a tono más oscuro) */
   --brand-ink: #2a1d00; /* texto sobre amarillo */
 
   /* Tinta (texto) — carbón cálido, no negro puro */
@@ -20,10 +20,10 @@
   --ink-4: #a59c8c; /* placeholder / deshabilitado */
 
   /* Superficies — mismo tono, sólo cambia la luz */
-  --bg: #fbf8f2; /* lienzo crema */
+  --bg: #f5eed7; /* lienzo crema (ajustado a tono más oscuro) */
   --surface-1: #ffffff; /* tarjetas */
-  --surface-2: #f4eee2; /* secciones alternas / inputs */
-  --surface-3: #ede5d4; /* realce sutil */
+  --surface-2: #ebe0be; /* secciones alternas / inputs (ajustado a tono más oscuro) */
+  --surface-3: #decfa0; /* realce sutil (ajustado a tono más oscuro) */
 
   /* Bordes — progresión de intensidad */
   --border-1: rgba(26, 23, 20, 0.08);
