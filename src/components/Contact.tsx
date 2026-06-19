@@ -28,8 +28,7 @@ export function Contact() {
                 Datos de contacto
               </h2>
               <p className="mt-4 max-w-md text-base leading-relaxed text-ink-2">
-                Estos son los datos de Coinval, productos publicitarias y de
-                activación de marca.
+                estos son los datos de contacto de Coinval.
               </p>
             </div>
 

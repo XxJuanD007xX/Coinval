@@ -27,6 +27,7 @@ export function Clients() {
                   alt={c.name}
                   width={200}
                   height={64}
+                  unoptimized
                   className="max-h-14 w-auto object-contain"
                 />
               </div>
