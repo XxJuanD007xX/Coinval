@@ -10,7 +10,7 @@ export function Catalog() {
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <Reveal className="max-w-2xl">
           <span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-strong">
-            Catálogo 2026
+            SECCIÓN
           </span>
           <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-ink-1 sm:text-4xl">
             Nuestras líneas de producto

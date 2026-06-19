@@ -237,7 +237,7 @@ export const totalImages = categories.reduce((n, c) => n + c.images.length, 0);
 
 export const clients = [
   { name: "Coca-Cola", logo: "/clientes/coca-cola.svg" },
-  { name: "Popsy", logo: "/clientes/popsy.webp" },
+  { name: "Popsy", logo: "/clientes/popsy.jpg" },
   { name: "Kokoriko", logo: "/clientes/kokoriko.png" },
   { name: "Hotel Sonesta", logo: "/clientes/sonesta.png" },
 ];
