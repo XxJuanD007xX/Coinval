@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coinval — Sitio web de catálogo
 
-## Getting Started
+Landing de una sola página para **Coinval**, fabricantes de productos
+publicitarios y de activación de marca. Construida con Next.js 16, React 19,
+Tailwind CSS v4 y Biome.
 
-First, run the development server:
+## Desarrollo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun dev          # http://localhost:3000
+bun run build    # build de producción
+bun run lint     # Biome
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estructura
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/app/globals.css` — tokens de color (tema amarillo), tipografías y
+  animaciones (reveal, split text, spotlight, zoom de galería).
+- `src/app/layout.tsx` — fuentes (Sora + Inter) y metadatos.
+- `src/app/page.tsx` — composición de la página.
+- `src/components/` — secciones: Header, Hero, Catálogo (galería con lightbox),
+  ¿Por qué Coinval?, Nosotros, Clientes, Contacto y Footer.
+- `src/components/anim/` — componentes animados inspirados en reactbits.dev:
+  `Reveal` (animated content), `CountUp`, `SplitText`, `SpotlightCard`.
+- `src/lib/catalog.ts` — datos de las 13 líneas de producto, **autogenerado**
+  con las 81 imágenes reales del catálogo.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Imágenes
 
-## Learn More
+Las **81 fotos reales** del catálogo se extrajeron del archivo
+`CATALOGO DE PRODUCTOS COINVAL - 2026.pptm` y viven en
+`public/catalogo/<categoria>/NN.png`. El logo oficial está en
+`public/logo-coinval.png`.
 
-To learn more about Next.js, take a look at the following resources:
+Para cambiar o agregar fotos, reemplaza/añade archivos en esas carpetas y
+actualiza el arreglo `images` de la categoría en `src/lib/catalog.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Logos de clientes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Están en `public/clientes/` como SVG (`coca-cola.svg`, `popsy.svg`,
+`kokoriko.svg`, `sonesta.svg`). Son **versiones tipográficas** aproximadas
+listas para usar; si tienes los logotipos oficiales en SVG/PNG, reemplaza esos
+archivos (manteniendo el nombre) y se mostrarán automáticamente.
 
-## Deploy on Vercel
+## Datos de contacto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Los teléfonos, correo, dirección y redes en `src/components/Contact.tsx` y el
+footer son **placeholders**. Reemplázalos por los datos reales de Coinval.

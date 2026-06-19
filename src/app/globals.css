@@ -1,26 +1,182 @@
 @import "tailwindcss";
 
+/*
+  COINVAL — sistema de color
+  Mundo del producto: fabricantes de publicidad y activación de marca.
+  Amarillo = visibilidad de marca / señalización. Carbón cálido = tinta.
+  Neutros crema/arena = madera teca, lienzo, taller.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Marca */
+  --brand: #ffc72c; /* amarillo señal */
+  --brand-strong: #f2a900; /* ámbar profundo (hover / detalle) */
+  --brand-soft: #fff3d1; /* lavado de marca para fondos */
+  --brand-ink: #2a1d00; /* texto sobre amarillo */
+
+  /* Tinta (texto) — carbón cálido, no negro puro */
+  --ink-1: #1a1714; /* títulos */
+  --ink-2: #423c34; /* cuerpo */
+  --ink-3: #6f6657; /* metadatos */
+  --ink-4: #a59c8c; /* placeholder / deshabilitado */
+
+  /* Superficies — mismo tono, sólo cambia la luz */
+  --bg: #fbf8f2; /* lienzo crema */
+  --surface-1: #ffffff; /* tarjetas */
+  --surface-2: #f4eee2; /* secciones alternas / inputs */
+  --surface-3: #ede5d4; /* realce sutil */
+
+  /* Bordes — progresión de intensidad */
+  --border-1: rgba(26, 23, 20, 0.08);
+  --border-2: rgba(26, 23, 20, 0.14);
+  --border-3: rgba(242, 169, 0, 0.55);
+
+  /* Sombra suave */
+  --shadow-sm: 0 1px 2px rgba(26, 23, 20, 0.06);
+  --shadow-md: 0 8px 24px -12px rgba(26, 23, 20, 0.18);
+  --shadow-lg: 0 24px 60px -28px rgba(26, 23, 20, 0.28);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-ink: var(--brand-ink);
+
+  --color-ink-1: var(--ink-1);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-ink-4: var(--ink-4);
+
+  --color-bg: var(--bg);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+
+  --color-border-1: var(--border-1);
+  --color-border-2: var(--border-2);
+  --color-border-3: var(--border-3);
+
+  --font-display: var(--font-sora);
+  --font-sans: var(--font-inter);
+
+  --radius-card: 18px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border-1);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink-2);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.brand-underline {
+  position: relative;
+  display: inline-block;
+}
+.brand-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.08em;
+  height: 0.34em;
+  background: var(--brand);
+  z-index: -1;
+  border-radius: 2px;
+}
+
+.tape {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--brand) 0 14px,
+    var(--brand-strong) 14px 28px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---- Animaciones (inspiradas en reactbits.dev) ---- */
+
+/* Animated Content / Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Split Text — palabras que entran escalonadas */
+.split-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em);
+  animation: split-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes split-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Spotlight Card — resplandor que sigue el cursor */
+.spotlight {
+  position: relative;
+  overflow: hidden;
+}
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s;
+  background: radial-gradient(
+    260px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(242, 169, 0, 0.18),
+    transparent 60%
+  );
+}
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Galería — zoom suave al pasar el cursor */
+.shot {
+  overflow: hidden;
+}
+.shot img {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.shot:hover img {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .split-word,
+  .shot img {
+    transition: none;
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
