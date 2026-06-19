@@ -6,7 +6,7 @@ const reasons: { icon: UtilityIcon; title: string; body: string }[] = [
   {
     icon: "star",
     title: "Experiencia",
-    body: "Trayectoria fabricando soluciones publicitarias para marcas líderes como Coca-Cola, Popsy, Kokoriko y Hotel Sonesta.",
+    body: "Trayectoria fabricando soluciones publicitarias para marcas líderes como Coca-Cola, Popsy, Kokoriko y Hotel Sonesta entre otras marcas lideres.",
   },
   {
     icon: "chat",
