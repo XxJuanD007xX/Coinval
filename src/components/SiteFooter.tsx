@@ -16,7 +16,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-5 py-12 lg:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:justify-between">
           <div className="max-w-xs">
-            <Logo className="h-9 w-auto" />
+            <Logo className="h-12 w-auto" />
             <p className="mt-4 text-sm leading-relaxed text-ink-3">
               Fabricantes de productos publicitarios y de activación de marca.
               Tú lo imaginas, nosotros lo creamos.

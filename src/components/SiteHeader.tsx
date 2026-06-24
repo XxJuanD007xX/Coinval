@@ -37,7 +37,7 @@ export function SiteHeader() {
           className="flex items-center"
           aria-label="Coinval inicio"
         >
-          <Logo className="h-9 w-auto" />
+          <Logo className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
